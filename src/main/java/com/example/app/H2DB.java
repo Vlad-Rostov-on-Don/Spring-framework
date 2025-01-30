@@ -20,12 +20,7 @@ public class H2DB implements Source {
     }
 
     private void createTableIfNotExist() throws SQLException {
-        String sql = """
-                CREATE TABLE IF NOT EXISTS cache (
-                key VARCHAR(255) PRIMARY KEY,
-                value BLOB
-                )
-                """;
+        String sql = "CREATE TABLE IF NOT EXISTS cache (key VARCHAR(255) PRIMARY KEY, value BLOB)";
         try (Statement stmt = connection.createStatement()) {
             stmt.execute(sql);
         }
@@ -33,7 +28,7 @@ public class H2DB implements Source {
 
     @Override
     public void save(String key, Object value) {
-        String sql = "MERGE INTO cache (key, value) VALUES (?, ?)";
+        String sql = "INSERT INTO cache (key, value) VALUES (?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setString(1, key);
@@ -42,7 +37,6 @@ public class H2DB implements Source {
         } catch (SQLException e) {
             throw new RuntimeException("Ошибка при сохранении в базу данных H2", e);
         }
-
     }
 
     @Override

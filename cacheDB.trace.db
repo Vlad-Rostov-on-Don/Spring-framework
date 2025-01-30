@@ -86,3 +86,31 @@ key VARCHAR(255) PRIMARY KEY,
 value BLOB
 )
  [42001-224]
+2025-01-30 18:41:57.029803+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS cache (\000a[*]key VARCHAR(255) PRIMARY KEY,\000avalue BLOB\000a)\000a"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS cache (\000a[*]key VARCHAR(255) PRIMARY KEY,\000avalue BLOB\000a)\000a"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS cache (
+key VARCHAR(255) PRIMARY KEY,
+value BLOB
+)
+ [42001-224]
+2025-01-30 19:05:07.076568+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS cache ([*]key VARCHAR(255) PRIMARY KEY, value BLOB)"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS cache ([*]key VARCHAR(255) PRIMARY KEY, value BLOB)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS cache (key VARCHAR(255) PRIMARY KEY, value BLOB) [42001-224]
+2025-01-30 19:11:27.376947+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS cache ([*]key VARCHAR(255) PRIMARY KEY, value BLOB)"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS cache ([*]key VARCHAR(255) PRIMARY KEY, value BLOB)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS cache (key VARCHAR(255) PRIMARY KEY, value BLOB) [42001-224]
+2025-01-30 19:15:07.453195+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS cache ([*]key VARCHAR(255) PRIMARY KEY, value BLOB)"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS cache ([*]key VARCHAR(255) PRIMARY KEY, value BLOB)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS cache (key VARCHAR(255) PRIMARY KEY, value BLOB) [42001-224]
+2025-01-30 19:42:01.260229+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS cache ([*]key VARCHAR(255) PRIMARY KEY, value BLOB)"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS cache ([*]key VARCHAR(255) PRIMARY KEY, value BLOB)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS cache (key VARCHAR(255) PRIMARY KEY, value BLOB) [42001-224]
+2025-01-30 21:29:52.182382+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS cache ([*]key VARCHAR(255) PRIMARY KEY, value BLOB)"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS cache ([*]key VARCHAR(255) PRIMARY KEY, value BLOB)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS cache (key VARCHAR(255) PRIMARY KEY, value BLOB) [42001-224]
