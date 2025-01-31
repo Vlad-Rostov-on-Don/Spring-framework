@@ -20,7 +20,7 @@ public class H2DB implements Source {
     }
 
     private void createTableIfNotExist() throws SQLException {
-        String sql = "CREATE TABLE IF NOT EXISTS cache (key VARCHAR(255) PRIMARY KEY, value BLOB)";
+        String sql = "CREATE TABLE IF NOT EXISTS cache (id VARCHAR(255) PRIMARY KEY, cache_value BLOB)";
         try (Statement stmt = connection.createStatement()) {
             stmt.execute(sql);
         }
